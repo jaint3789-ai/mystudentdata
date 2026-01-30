@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxury Villa | Rooms & Suites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #fff;
+        }
+
+        /* HERO */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+            url('villa.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        /* ROOMS */
+        .rooms {
+            padding: 80px 8%;
+        }
+
+        .rooms h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .room-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 25px;
+        }
+
+        .room-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .room-content p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .room-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .room-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #facc15;
+        }
+
+        .book-btn {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #facc15, #eab308);
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .book-btn:hover {
+            background: #fff;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            padding: 60px 8% 25px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        footer h3 {
+            font-family: 'Playfair Display', serif;
+            color: #facc15;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #facc15;
+        }
+
+        .social a {
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Luxury Rooms</h1>
+        <p>Unmatched comfort & refined elegance</p>
+    </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms">
+    <h2>Our Exclusive Rooms</h2>
+
+    <div class="room-grid">
+
+        <div class="room-card">
+            <img src="room1.jpg" alt="Royal Suite">
+            <div class="room-content">
+                <h3>Royal Suite</h3>
+                <p>Ocean-facing luxury suite with private balcony & jacuzzi.</p>
+
+                <div class="room-features">
+                    <span class="feature">King Bed</span>
+                    <span class="feature">Ocean View</span>
+                    <span class="feature">Jacuzzi</span>
+                    <span class="feature">Free WiFi</span>
+                </div>
+
+                <div class="room-footer">
+                    <span class="price">₹25,000 / night</span>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <img src="room2.jpg" alt="Premium Room">
+            <div class="room-content">
+                <h3>Premium Villa Room</h3>
+                <p>Elegant interiors with garden view & private seating.</p>
+
+                <div class="room-features">
+                    <span class="feature">Queen Bed</span>
+                    <span class="feature">Garden View</span>
+                    <span class="feature">Mini Bar</span>
+                    <span class="feature">Smart TV</span>
+                </div>
+
+                <div class="room-footer">
+                    <span class="price">₹18,000 / night</span>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <img src="room3.jpg" alt="Family Room">
+            <div class="room-content">
+                <h3>Family Luxury Room</h3>
+                <p>Spacious family room with premium comfort & balcony.</p>
+
+                <div class="room-features">
+                    <span class="feature">2 Beds</span>
+                    <span class="feature">Balcony</span>
+                    <span class="feature">Breakfast</span>
+                    <span class="feature">AC</span>
+                </div>
+
+                <div class="room-footer">
+                    <span class="price">₹22,000 / night</span>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <img src="room4.jpg" alt="Honeymoon Suite">
+            <div class="room-content">
+                <h3>Honeymoon Suite</h3>
+                <p>Romantic private pool suite with candlelight décor.</p>
+
+                <div class="room-features">
+                    <span class="feature">Private Pool</span>
+                    <span class="feature">Sea View</span>
+                    <span class="feature">Couple Spa</span>
+                </div>
+
+                <div class="room-footer">
+                    <span class="price">₹30,000 / night</span>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3>Luxury Villa</h3>
+            <p>Luxury living with breathtaking views and premium hospitality.</p>
+            <div class="social">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Rooms</a></p>
+            <p><a href="#">Gallery</a></p>
+            <p><a href="#">Contact</a></p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📍 Goa, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ info@luxuryvilla.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Luxury Villa. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>
